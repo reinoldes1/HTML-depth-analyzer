@@ -14,29 +14,39 @@ public class HtmlAnalyzer{
     public static void main(String[] args) throws IOException {
         try (BufferedReader input = carregaHTML(args)){
             if (input == null) return;
-            
-            System.out.println("Utilizando Regex:");
+
+            System.out.println("Utilizando Regex: ");
             String maiorNivelRegex = verificaHTMLRegex(input);
 
             if (maiorNivelRegex == null){
-                System.out.println("malformed HTML");
+                System.out.println("malformed HTML ");
             } else{
-                System.out.println(maiorNivelRegex);
+                int length = maiorNivelRegex.length();
+                String border = "+" + "-".repeat(length + 2) + "+";
+
+                System.out.println("\n" + border);
+                System.out.println("| " + maiorNivelRegex + " |");
+                System.out.println(border + "\n");
             }
         }
 
         try (BufferedReader input = carregaHTML(args)){
-                if (input == null) return;
-                
-                System.out.println("Utilizando Contadores:");
-                String maiorNivel = verificaHTML(input);
-    
-                if (maiorNivel == null){
-                    System.out.println("malformed HTML");
-                } else{
-                    System.out.println(maiorNivel);
-                }
-        }
+            if (input == null) return;
+            
+            System.out.println("Utilizando Contadores: ");
+            String maiorNivel = verificaHTML(input);
+
+            if (maiorNivel == null){
+                System.out.println("malformed HTML ");
+            } else{
+                int length = maiorNivel.length();
+                String border = "+" + "-".repeat(length + 2) + "+";
+
+                System.out.println("\n" + border);
+                System.out.println("| " + maiorNivel + " |");
+                System.out.println(border + "\n");
+            }
+    }
                 
                 
 
