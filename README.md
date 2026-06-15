@@ -1,52 +1,124 @@
-# HTML Depth Analyzer
+<a id="readme-top"></a>
 
-Technical challenge developed in Java to analyze the depth of HTML structures and extract the deepest level using only Java's native framework.
+[![Contributors][contributors-shield]][contributors-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
+
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+
+  <h3 align="center">HTML Depth Analyzer</h3>
+
+  <p align="center">
+    Technical challenge developed in Java to analyze the depth of HTML structures and extract the deepest level using only Java's native framework.
+</div>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About the Project</a>
+      <ul>
+        <li><a href="#coding-development">Coding Development</a></li>
+        <li><a href="#build-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#how-to-run">How to Run</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
 ## About the project
+
+[![HTML Analyzer][product-screenshot]](https://github.com/reinoldes1/HTML-depth-analyzer)
 
 The main goal is to identify and extract the deepest text line in a HTML structure, validating its structure (malformed check) and connection (URL Connection Error).
 
 Each line in the HTML can only contain 1 element, being opening, closing and text. Only tags with pair will be used to determine the depth, which makes self-closing tags and opening tags with attributes not valid.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Coding Development
+
 1. **Initial Approach(Iteration):** I started by using a simple iterating logic of tags. Though functional for simple structures, I noticed limitations when dealing with more complex HTMLs.
 2. **Final Approach (Regex + Stack):** After some tests I started developing a solution using Regular Expressions (Regex) and data structures (Stack) which facilitated a better validation of opening, closing, text and excluding self-closing and tags with attributes.
 
-## Stack
-- **Programming Language:** Java (JDK 20+)
-- **Libraries:** "java.net", "java.io", "java.util"
-- **Environment:** Developed and tested in Arch Linux
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## How to run
-```bash
-javac HtmlAnalyzer.java
-java HtmlAnalyzer.java <URL_OR_PATH_TO_FILE>
-```
+### Built With
 
-------------------------------------------------------
+* [![Java][Java]][Java-url]
 
-# HTML Depth Analyzer
 
-Desafio técnico desenvolvido em java para analisar a profundidade da estrutura de um determinado HTML e extrair o conteúdo do nível mais profundo usando apenas o framework nativo do Java.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Sobre o projeto
+<!-- GETTING STARTED -->
+## Getting Started
 
-O objetivo principal é identificar a linha de texto com o maior nível de indentação em um determinado HTML, validando sua estrutura (malformed HTML) e conexão (URL Connection Error).
+To start, clone the repository:
+  ```sh
+  git clone https://github.com/reinoldes1/HTML-depth-analyzer.git
+  ```
 
-Cada linha do HTML poderia apenas conter 1 elemento, sendo ele de abertura, fechamento ou texto. Apenas pares de tags são utilizados para a contagem, sendo assim self-closing tags e tags de abertura com atributos não são contados.
+### How to Run
 
-### Desenvolvimento do código
-1. **Abordagem Inicial:** Inicialmente comecei utilizando a lógica simples de iteração para a contagem. Embora tenha funcionado para estruturas simples o código falhava ao testar outros tipos de HTMLs mais complexos.
-2. **Abordagem Final:** Depois de alguns testes comecei a desenvolver uma solução utilizando o Regular Expressions (Regex) e estrutura de pilhas (Stack) que facilitaram a melhor validação de tags de abertura, fechamento, texto e excluindo tags com atributos e self-closing.
+To execute, run the following on shell
+  ```sh
+    javac HtmlAnalyzer.java
+    java HtmlAnalyzer.java <URL_OR_PATH_TO_FILE>
+  ```
 
-## Ambiente
-- **Linguagem de Programação:** Java (JDK 20+)
-- **Bibliotecas:** "java.net", "java.io", "java.util"
-- **Ambiente:** Desenvolvido e testado no Arch Linux
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Como rodar
+<!-- CONTRIBUTING -->
+## Contributing
 
-```bash
-javac HtmlAnalyzer.java
-java HtmlAnalyzer.java <URL_OR_PATH_TO_FILE>
-```
+Contributions are very welcome, feel free to make yours.
+
+If you have any suggestions, fork the project and open a pull request!
+
+1. Fork the project
+2. Create a branch for your contribution (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open the Pull Request
+
+<!-- Contact -->
+## Contact
+
+João Victor - [Linkedin](https://www.linkedin.com/in/joao-victor-nunes-reynolds/)
+
+Link do Projeto: [HTML Analyzer](https://github.com/reinoldes1/HTML-depth-analyzer)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/reinoldes1/HTML-depth-analyzer.svg?style=for-the-badge
+[contributors-url]: https://github.com/reinoldes1/HTML-depth-analyzer/graphs/contributors
+
+[stars-shield]: https://img.shields.io/github/stars/reinoldes1/HTML-depth-analyzer.svg?style=for-the-badge
+[stars-url]: https://github.com/reinoldes1/HTML-depth-analyzer/stargazers
+
+[issues-shield]: https://img.shields.io/github/issues/reinoldes1/HTML-depth-analyzer.svg?style=for-the-badge
+[issues-url]: https://github.com/reinoldes1/HTML-depth-analyzer/issues
+
+[product-screenshot]: images/screenshot.png
+
+[Java]: https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white
+[Java-url]: https://www.java.com/en/
